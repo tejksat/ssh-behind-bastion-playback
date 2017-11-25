@@ -1,6 +1,6 @@
 # ssh-behind-bastion-playback
 
-`docker-compose.yml` contains two services based on images with `sshd` on board:
+`docker-compose.yml` contains two services based on `danielguerra/alpine-sshd` Docker image with `sshd` on board:
 - `bastion` service is seen **outside** of the docker-compose project network, `sshd` could be reached outside by the value of `BASTION_SSH_PORT` environment variable (equal to `4848`) contained in `.env` file;
 - `internal` service could be reached by `internal` hostname **inside** the docker-compose project network, `22` port is exposed for `sshd`.
 
