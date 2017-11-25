@@ -1,0 +1,18 @@
+version: '3'
+services:
+  bastion:
+    image: danielguerra/alpine-sshd
+    volumes:
+      - ssh-keys:/root/.ssh
+    ports:
+      - "$BASTION_SSH_PORT:22"
+    links:
+      - internal
+  internal:
+    image: danielguerra/alpine-sshd
+    volumes:
+      - ssh-keys:/root/.ssh
+    expose:
+      - "$INTERNAL_SSH_PORT"
+volumes:
+  ssh-keys:
