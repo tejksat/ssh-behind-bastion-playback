@@ -6,4 +6,4 @@
 
 `start.sh` starts Docker Compose services and prepares `ssh-keys` volume by copying `~/.ssh/id_rsa.pub` (which correspond to `~/.ssh/id_rsa`) to the `/root/.ssh/authorized_keys`, which becomes available for both services.
 
-`.ssh/config` could be append to `~/.ssh/config` configuration to a local machine. `ssh internal.service` should work outright.
+`.ssh/config` could be append to `~/.ssh/config` configuration to a local machine. `ssh internal.service` should work outright after that.
