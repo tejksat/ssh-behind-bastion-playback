@@ -9,7 +9,7 @@ services:
     links:
       - internal
   internal:
-    image: danielguerra/alpine-sshd
+    build: build/internal
     volumes:
       - ssh-keys:/root/.ssh
     expose:
